@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furnitar/core/product-model.dart';
+import 'package:furnitar/screens/product/product.dart';
 
 class ProductItem extends StatelessWidget {
   final ProductModel productModel;
@@ -11,28 +12,39 @@ class ProductItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GridTile(
-      footer: Material(
-        color: Colors.transparent,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.vertical(bottom: Radius.circular(4)),
+    return InkResponse(
+      child: GridTile(
+        footer: Material(
+          color: Colors.transparent,
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(bottom: Radius.circular(4)),
+          ),
+          clipBehavior: Clip.antiAlias,
+          child: GridTileBar(
+            backgroundColor: Colors.black45,
+            title: _ProductItemTitleText(productModel.name),
+            subtitle: _ProductItemTitleText(productModel.price),
+          ),
         ),
-        clipBehavior: Clip.antiAlias,
-        child: GridTileBar(
-          backgroundColor: Colors.black45,
-          title: _ProductItemTitleText(productModel.name),
-          subtitle: _ProductItemTitleText(productModel.price),
+        child: productModel.image,
+      ),
+      enableFeedback: true,
+      onTap: () => Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => ProductScreen(
+            productModel: productModel,
+          ),
         ),
       ),
-      child: productModel.image,
     );
   }
 }
 
 class _ProductItemTitleText extends StatelessWidget {
-  const _ProductItemTitleText(this.text);
-
   final String text;
+
+  const _ProductItemTitleText(this.text);
 
   @override
   Widget build(BuildContext context) {
