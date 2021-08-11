@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:furnitar/screens/home/widgets/product-list.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key? key}) : super(key: key);
@@ -22,24 +23,10 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: Text("FurnitAR"),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
+      body: Column(
+        children: <Widget>[
+          ProductList()
+        ],
       ),
     );
   }

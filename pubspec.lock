@@ -2,7 +2,7 @@
 # See https://dart.dev/tools/pub/glossary#lockfile
 packages:
   ar_flutter_plugin:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       name: ar_flutter_plugin
       url: "https://pub.dartlang.org"
