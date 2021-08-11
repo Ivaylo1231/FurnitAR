@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:furnitar/screens/home/home.dart';
+import 'package:furnitar/screens/home/home-screen.dart';
 
 void main() {
   runApp(MyApp());

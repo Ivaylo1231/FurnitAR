@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furnitar/core/product-model.dart';
-import 'package:furnitar/screens/product/product.dart';
+import 'package:furnitar/screens/product/product-screen.dart';
 
 class ProductItem extends StatelessWidget {
   final ProductModel productModel;
