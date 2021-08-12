@@ -1,12 +1,10 @@
 import 'dart:convert';
 
-import 'package:ar_flutter_plugin/datatypes/node_types.dart';
-import 'package:ar_flutter_plugin/models/ar_node.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:furnitar/core/product-model.dart';
-import 'package:furnitar/screens/home/widgets/product-item.dart';
-import 'package:vector_math/vector_math_64.dart';
+
+import '../../../core/product-model.dart';
+import 'product-item.dart';
 
 class ProductList extends StatefulWidget {
   ProductList({Key? key}) : super(key: key);

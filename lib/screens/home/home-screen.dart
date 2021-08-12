@@ -1,21 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:furnitar/screens/home/widgets/product-list.dart';
 
-class HomeScreen extends StatefulWidget {
-  HomeScreen({Key? key}) : super(key: key);
+import 'widgets/product-list.dart';
 
-  @override
-  _HomeScreenState createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,11 +11,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: Text("FurnitAR"),
       ),
-      body: Column(
-        children: <Widget>[
-          ProductList()
-        ],
-      ),
+      body: ProductList(),
     );
   }
 }
