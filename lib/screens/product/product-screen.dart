@@ -17,7 +17,9 @@ class ProductScreen extends StatelessWidget {
       ),
       body: Column(
         children: <Widget>[
-          ARFurniture(),
+          ARFurniture(
+            model: this.productModel.model,
+          ),
         ],
       ),
     );
