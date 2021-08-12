@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Omles",
+        "price": "$0.99",
+        "imagePath": "https://cdn.discordapp.com/avatars/374887049981067267/5f9a59d4acaae0359a2a67b6111a1aef.png?size=256",
+        "modelPath": "https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/Duck/glTF-Binary/Duck.glb",
+        "isLocal": false
+    }
+]
