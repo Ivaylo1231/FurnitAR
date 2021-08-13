@@ -14,6 +14,11 @@ class ProductList extends StatefulWidget {
 }
 
 class _ProductListState extends State<ProductList> {
+  @override
+  void initState() { 
+    super.initState();
+  }
+
   Future<List<ProductModel>> _getProducts() async {
     return ProductModel.fromMapList(
       List<Map<String, dynamic>>.from(
@@ -31,19 +36,17 @@ class _ProductListState extends State<ProductList> {
           return CircularProgressIndicator();
         }
 
-        return Expanded(
-          child: GridView.count(
-            primary: false,
-            padding: const EdgeInsets.all(20),
-            crossAxisSpacing: 10,
-            mainAxisSpacing: 10,
-            crossAxisCount: 2,
-            children: snapshot.data!
-              .map<Widget>(
-                (productModel) => ProductItem(productModel: productModel),
-              )
-            .toList(),
-          ),
+        return GridView.count(
+          primary: false,
+          padding: const EdgeInsets.all(20),
+          crossAxisSpacing: 10,
+          mainAxisSpacing: 10,
+          crossAxisCount: 2,
+          children: snapshot.data!
+            .map<Widget>(
+              (productModel) => ProductItem(productModel: productModel),
+            )
+          .toList(),
         );
       }
     );
