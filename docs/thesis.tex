@@ -1,14 +1,34 @@
 \documentclass[pdftex,14pt,a4paper]{extreport}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
 \usepackage[bulgarian]{babel}
+\usepackage[margin=1in]{geometry}
+\usepackage{titlesec}
+\usepackage{afterpage}
+
+\titleformat{\chapter}{\normalfont\huge}{\chaptername}{14pt}{\huge}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \newpage}
+
 \begin{document}
    \setcounter{secnumdepth}{3}
    \setcounter{tocdepth}{3}
-   % \hypersetup{pageanchor=false}
-
+  
    \begin{titlepage}
       \input{sections/0.1.titlepage.tex}
    \end{titlepage}
+   \afterpage{\blankpage}
+   \input{sections/0.2.instructor-opinion.tex}
+   \input{sections/0.3.introduction.tex}
+   \input{sections/1.0.methods-and-technologies.tex}
+   \input{sections/2.0.project-structure.tex}
+   \input{sections/3.0.programming-realistion.tex}
+   \input{sections/4.0.user-manual.tex}
+   \input{sections/5.1.apendix.tex}
+   \input{sections/5.2.citations.tex}
+   
    \tableofcontents
-   \pagebreak
-   \newpage
 \end{document}
