@@ -6,19 +6,7 @@ import 'package:flutter/services.dart';
 import '../../../core/product-model.dart';
 import 'product-item.dart';
 
-class ProductList extends StatefulWidget {
-  ProductList({Key? key}) : super(key: key);
-
-  @override
-  _ProductListState createState() => _ProductListState();
-}
-
-class _ProductListState extends State<ProductList> {
-  @override
-  void initState() { 
-    super.initState();
-  }
-
+class ProductList extends StatelessWidget {
   Future<List<ProductModel>> _getProducts() async {
     return ProductModel.fromMapList(
       List<Map<String, dynamic>>.from(
