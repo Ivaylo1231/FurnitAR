@@ -1,1 +1,24 @@
 \section{Инсталация на приложението}
+За инсталиране на приложението на мобилно устройство, е нужно да се навигира в директорията на проекта и да се изпълни командата:
+\lstinputlisting[language=bash]{commands/install.sh}
+
+За да се генерират инсталационните файлове за Android, трябва да се изпълни следната команда:
+\lstinputlisting[language=bash]{commands/build-android.sh}
+
+Това ще генерира 3 \emph{.apk} инсталационни файла, които могат да бъдат качени на мобилното устройство и инсталирани:
+\begin{itemize}
+    \item \emph{/build/app/outputs/apk/release/app-armabi-v7a-release.apk}
+    \item \emph{/build/app/outputs/apk/release/app-arm64-v8a-release.apk}
+    \item \emph{/build/app/outputs/apk/release/app-x86-64-release.apk}
+\end{itemize}
+
+За да се построи приложението за iOS, командата, следната команда трябва да бъде изпълнена:
+\lstinputlisting[language=bash]{commands/build-ios.sh}
+
+Това ще генерира \emph{/build/ios/archive/DRUN.xcarchive} архив, съдържащ инсталационните файлове.
+
+Важно е да се отбележи, че приложението не е налично за всички модели телефони. Това се дължи на ограничената поддръжка на ARCore и на ARKit. За Android устройства също така е нужно да се инсталира \emph{Google Play Services for AR} апликацията, която е налична в \emph{Google Play Store}.
+
+
+Списък със съвместими iOS устройства може да бъде достъпен на адрес: \href{https://www.cnet.com/tech/mobile/these-iphones-and-ipads-work-with-arkit/}{https://www.cnet.com/tech/mobile/these-iphones-and-ipads-work-with-arkit/}.
+Списък със съвместими Android устройства може да бъде достъпен на адрес: \href{https://developers.google.com/ar/devices/}{https://developers.google.com/ar/devices/}.
