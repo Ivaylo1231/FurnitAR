@@ -7,25 +7,16 @@ import 'package:ar_flutter_plugin/managers/ar_session_manager.dart';
 import 'package:ar_flutter_plugin/models/ar_node.dart';
 import 'package:flutter/material.dart';
 
-class ARFurniture extends StatefulWidget {
+class ARFurniture extends StatelessWidget {
   final ARNode model;
+
   ARFurniture({
     Key? key,
     required this.model,
   }) : super(key: key);
 
-  @override
-  _ARFurnitureState createState() => _ARFurnitureState(model: this.model);
-}
-
-class _ARFurnitureState extends State<ARFurniture> {
-  final ARNode model;
-  
   late ARSessionManager arSessionManager;
   late ARObjectManager arObjectManager;
-  late ARNode objectNode;
-
-  _ARFurnitureState({required this.model});
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +39,7 @@ class _ARFurnitureState extends State<ARFurniture> {
 
     this.arSessionManager.onInitialize(
           showFeaturePoints: false,
-          showPlanes: true,
+          showPlanes: false,
           showWorldOrigin: false,
           handleTaps: false,
         );
