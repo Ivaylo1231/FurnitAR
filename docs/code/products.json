@@ -1,0 +1,23 @@
+[
+    {
+        "name": "Black Leather Chair",
+        "price": "$50.00",
+        "imagePath": "assets/chair.jpeg",
+        "modelPath": "assets/chair.glb",
+        "isLocal": true
+    },
+    {
+        "name": "Tirered Floor Lamp",
+        "price": "$20.00",
+        "imagePath": "assets/lamp.jpeg",
+        "modelPath": "assets/lamp.glb",
+        "isLocal": true
+    },
+    {
+        "name": "Classic Table",
+        "price": "$100.00",
+        "imagePath": "assets/table.jpeg",
+        "modelPath": "assets/table.glb",
+        "isLocal": true
+    }
+]
