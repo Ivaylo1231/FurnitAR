@@ -1,1 +1,28 @@
 \section{Реализация на AR функционалността}
+Екранът с за разглеждане на продукт получава като аргументи гореописаната информация за продукта.
+
+\lstinputlisting[language=Java, linerange={10-19}]{code/ar-furniture.dart}
+
+AR функционалност е разработен с помоща на ar-flutter-plugin библиотеката. Използва се ARView елемента, който се визуализира на цял екран. Той служи за създаване на ``прозорец'' за аугментирана реалност. ARView получава два аргумента:
+
+\begin{itemize}
+    \item \textbf{onARViewCreated}
+    Функция, която да се изпълни при зареждане на елемента;
+    \item \textbf{PlaneDetectionConfig}
+    Определя за какъв тип равнини трябва ARView да следи.
+\end{itemize}
+
+\lstinputlisting[language=Java, linerange={21-29}]{code/ar-furniture.dart}
+
+Метода, който се изпълнява при създаване на AR прозореца, инициализира в себе си мениджър на настоящата сесия - \emph{arSessionManager} и мениджър на обекти - \emph{arObjectManager}. След това в управителя на 3D обекти се добавя модела на предмета, който трябва да се визуализира в пространството. Показването на информация, служеща за дебъгинг, като равнини, отправна точка и др. е изключена:
+
+\lstinputlisting[language=Java, linerange={31-49}]{code/ar-furniture.dart}
+
+Завършената версия на екрана с AR функционалност може да се наблюдава на фиг. \ref{fig:ar-screen-in-3}.
+
+\begin{figure}[H]
+    \includegraphics[width=0.5\textwidth]{ar-screen-3.png}
+    \centering
+    \caption{AR визуализация в мобилното приложение}
+    \label{fig:ar-screen-in-3}
+\end{figure}
