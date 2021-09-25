@@ -26,7 +26,7 @@ class ProductModel {
     ARNode model = ARNode(
       type: map['isLocal'] ? NodeType.localGLTF2 : NodeType.webGLB,
       uri: map['modelPath'], 
-      scale: Vector3(0.2, 0.2, 0.2),
+      scale: Vector3(20, 20, 20),
       position: Vector3(0.0, 0.0, 0.0),
       rotation: Vector4(1.0, 0.0, 0.0, 0.0),
     );
